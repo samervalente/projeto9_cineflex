@@ -1,0 +1,21 @@
+.sucessTitle{
+    color:#247A6B;
+    font-weight: 700;
+}
+
+
+
+.resume{
+    margin:30px 0px;
+}
+
+.resume p{
+    margin-bottom:10px;
+}
+
+h5{
+    font-size: 24px;
+    font-weight: 700;
+    color:#293845;
+    margin-bottom:5px;
+}

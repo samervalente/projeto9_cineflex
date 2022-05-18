@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+   
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+button{
+    background-color: #E8833A;
+    color:white;
+    font-size:18px;
+    border:none;
+    border-radius:3px;
+    width:83px;
+    height:43px;
+}
+
+
+
