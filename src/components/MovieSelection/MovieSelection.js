@@ -1,41 +1,37 @@
-import "./MovieSelection.css"
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import DoisMil from "../../assets/images/2067.png"
-import EnolaHolmes from "../../assets/images/EnolaHolmes.png"
+import "./MovieSelection.css";
 
-function Poster(){
-    return (
-        <>
-           <div>
-           <div className="movie">
-                <img alt="movie" className="cartaz" src={DoisMil} />
-            </div>
-           </div>
-           <div>
-           <div className="movie">
-                <img className="cartaz" alt="movie" src={EnolaHolmes} />
-            </div>
-           </div>
-           <div className="movie">
-                <img className="cartaz" alt="movie" src={EnolaHolmes} />
-            </div>
-        </>
-    )
+
+export default function MovieSelection() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    const promise = axios.get(
+      "https://mock-api.driven.com.br/api/v5/cineflex/movies"
+    );
+    promise.then((resposta) => {
+      setMovies([...resposta.data]);
+    });
+    console.log(movies);
+  }, []);
+
+  return (
+    <>
+      <div className="box">
+        <h4>Selecione o filme</h4>
+        <div className="movies">
+          {movies.map((movie, index) => (
+            <Link to={`/filme/${movie.id}`} key={index}>
+              <div  className="movie">
+                <img alt="movie" className="cartaz" src={movie.posterURL} />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
-
-
-export default function MovieSelection(){
-    return (
-        <>
-            <div className="box">
-            <h4>Selecione o filme</h4>
-            <div className="movies">
-                <Poster />
-            </div>
-            </div>
-
-        </>
-
-    )
-}
-
