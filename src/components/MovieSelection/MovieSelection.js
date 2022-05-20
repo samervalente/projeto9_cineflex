@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 import "./MovieSelection.css";
 
 
@@ -15,8 +16,9 @@ export default function MovieSelection() {
     promise.then((resposta) => {
       setMovies([...resposta.data]);
     });
-    console.log(movies);
   }, []);
+
+
 
   return (
     <>
@@ -25,8 +27,9 @@ export default function MovieSelection() {
         <div className="movies">
           {movies.map((movie, index) => (
             <Link to={`/filme/${movie.id}`} key={index}>
-              <div  className="movie">
+              <div className="movie">
                 <img alt="movie" className="cartaz" src={movie.posterURL} />
+                
               </div>
             </Link>
           ))}

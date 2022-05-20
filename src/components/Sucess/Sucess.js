@@ -1,8 +1,12 @@
+import Session from "../Session/Session";
 import "./Sucess.css";
+
 
 export default function Sucess() {
   return (
     <>
+     
+
       <div className="box">
         <div className="AllInfos">
           <h4 className="sucessTitle">Pedido feito com sucesso!</h4>

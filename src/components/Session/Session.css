@@ -78,4 +78,27 @@
     height:42px;
     color:#FFFFFF;
     margin-bottom:20px;
+    cursor: pointer;
+}
+.reservar.orange{
+    background-color: orange;
+}
+
+.reservar.gray{
+    background-color:gray;
+}
+
+.warning{
+    color:red;
+    display: flex;
+    font-size:18px;
+    margin-left:15px;
+}
+
+.warning ion-icon{
+    margin-right:5px;
+}
+
+.hidden{
+    display:none;
 }
