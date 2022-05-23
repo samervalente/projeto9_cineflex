@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-top:50px;
+    margin-bottom:150px;
 }
 
 button{
@@ -31,30 +32,6 @@ button:hover{
     background-color: rgb(168, 68, 1);
 }
 
-.Footer{
-    background-color: #DFE6ED;
-    border: 1px solid #9EADBA;
-    display:flex;
-    align-items: center;
-}
-
-.Footer .movie{
-    width: 64px;
-    height: 90px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-}
-
-.Footer .movie img{
-    width:48px;
-    height:72px;
-}
-
-.Footer p{
-    font-size: 26px;
-    color: #293845;
-} 
 
 
 

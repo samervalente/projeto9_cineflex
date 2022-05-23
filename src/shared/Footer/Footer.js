@@ -1,3 +1,5 @@
+import "./Footer.css"
+
 export default function Footer({poster, title, session}) {
   return (
     <>

@@ -1,0 +1,29 @@
+.Footer{
+    background-color: #DFE6ED;
+    border: 1px solid #9EADBA;
+    display:flex;
+    align-items: center;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+   
+}
+
+.Footer .movie{
+    width: 64px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.Footer .movie img{
+    width:48px;
+    height:72px;
+}
+
+.Footer p{
+    font-size: 26px;
+    color: #293845;
+} 
