@@ -11,13 +11,18 @@
     cursor:pointer;
 }
 
+.assento:hover{
+background-color: rgba(1, 163, 115, 0.884);
+
+}
+
 .assento.indisponível{
     background-color: #F7C52B;
     
 }
 
 .assento.selecionado{
-    background-color: #8DD7CF;;
+    background-color: #23d85a;;
 }
 
 .grid-container{
@@ -29,19 +34,17 @@
 
 .status{
     display:flex;
+    flex-direction: column;
     width:320px;
     justify-content: space-between;
-    
-  
+    margin:15px;
 }
 
 .status > div {
     font-size:14px;
     display: flex;
-    flex-direction: column;
     align-items:center;
-    justify-content:center;
-    margin:13px;  
+    justify-content:space-around;
 }
 
 .status .assento{

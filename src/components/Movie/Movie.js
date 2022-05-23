@@ -1,18 +1,16 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, } from "react-router-dom";
 import axios from "axios";
 
-
 import "./Movie.css";
+import Footer from "../../shared/Footer/Footer"
+import BackButton from "../../shared/BackButton/BackButton"
 
-
-
-export default function Movie() {
+export default function Movie({infos, setMovieID}) {
   const [movie, setMovie] = useState({});
   const {idMovie}  = useParams();
   const [dayes, setDayes] = useState([]);
 
-  
 
   useEffect(() => {
     const promise = axios.get(
@@ -22,11 +20,12 @@ export default function Movie() {
     promise.then((resposta) => {
       setMovie({ ...resposta.data });
       setDayes([...resposta.data.days]);
+      setMovieID(resposta.data.id)
     });
   }, []);
 
 
-  let infos = dayes.map((object, index) => {
+  let sessions = dayes.map((object, index) => {
     return (
       <div key={index} className="section">
         <p>
@@ -47,16 +46,12 @@ export default function Movie() {
 
   return (
     <>
+      <BackButton route={"/"} />
       <div className="box">
         <h4>Selecione o horário</h4>
-        {infos}
+        {sessions}
       </div>
-      <div className="Footer">
-        <div className="movie">
-          <img className="cartaz" src={movie.posterURL} alt="Poster" />
-        </div>
-        <p>{movie.title}</p>
-      </div>
+      <Footer poster={movie.posterURL} title={movie.title} session={""} />
     </>
   );
 }

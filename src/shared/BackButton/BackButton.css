@@ -1,0 +1,15 @@
+.BackButton{
+    color:#E8833A;
+    width:40px;
+    height:50px;
+    position: fixed;
+    cursor: pointer;
+    transition: all 0.3s;
+    left:10px;
+    top:40px;
+}
+
+.BackButton:hover{
+    color: rgb(168, 68, 1);
+    width: 60px;
+}

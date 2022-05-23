@@ -1,7 +1,10 @@
 header{
     background-color:#C3CFD9;
     text-align:center;
-
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
 }
 
 h1{
